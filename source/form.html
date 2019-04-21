@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/logo-mobile-header-svg.svg" width="191" height="39" alt="Логотип Cat Energy">
+        <img src="img/logo-mobile-header-svg.svg" width="191" height="39" alt="Логотип Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
               <a>Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="form-main">
@@ -36,28 +36,26 @@
         </div>
         <img class="contacts__map" src="https://dummyimage.com/320x400/4f4b4f/fff" alt="Карта расположения магазина" width="320" height="400">
       </section>
-      <section class="social">
-        <a class="social__logo" href="#">
-        <img class="social__logo-img" src="img/footer-logo-svg.svg" alt="Карта расположения магазина" width="128" height="24">
+        <a class="page-footer__logo" href="#">
+          <img src="img/footer-logo-svg.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
-        <div class="social__wrapper social-icon">
-          <ul class="social-icon__list">
+        <section class="social">
+          <ul class="social__list">
             <li class="social__item">
-              <a class="social-icon__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
             <li class="social__item">
-              <a class="social-icon__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
             </li>
             <li class="social__item">
-              <a class="social-icon__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
             </li>
           </ul>
+        </section>
+        <div class="page-footer__copyright">
+          <p class="page-footer__academy">HTML Academy</p>
+          <span class="page-footer__logo-academy"></span>
         </div>
-        <div class="social__copyright">
-          <p class="social__academy">HTML Academy</p>
-          <span class="social__logo-academy"></span>
-        </div>
-      </section>
     </footer>
   </body>
 </html>
