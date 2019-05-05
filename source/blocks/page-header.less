@@ -1,0 +1,28 @@
+.page-header__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: @tablet-wrapper;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    margin-bottom: -100px;
+  }
+
+  .page-header__wrapper {
+    width: @desktop-wrapper;
+  }
+
+  .page-header--catalog {
+    margin-bottom: 0px;
+  }
+}

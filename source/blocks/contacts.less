@@ -1,0 +1,44 @@
+.contacts__wrapper {
+  .wrapper-mobile;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacts__dealer {
+  font-size: 16px;
+  line-height: 20px;
+  color: @headline-color;
+  text-transform: @font-type;
+}
+
+.contacts__address {
+  font-size: 14px;
+  line-height: 20px;
+  color: @text-color;
+}
+
+.contacts__map {
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    width: @tablet-wrapper;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    left: 400px;
+    top: 150px;
+  }
+}
