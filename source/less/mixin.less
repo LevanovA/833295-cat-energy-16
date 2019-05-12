@@ -23,7 +23,15 @@
   color: @text-color;
 }
 
-.wrapper-mobile () {
-  width: 280px;
+.wrapper () {
+  width: @mobile-wrapper;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width)  {
+      width: @tablet-wrapper;
+  }
+
+  @media (min-width: @desktop-width)  {
+    width: @desktop-wrapper;
+  }
 }
