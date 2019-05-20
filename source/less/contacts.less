@@ -2,16 +2,19 @@
   .wrapper;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 .contacts__dealer {
   font-size: 16px;
   line-height: 20px;
   color: @headline-color;
+  margin-right: 24px;
   text-transform: @font-type;
 }
 
 .contacts__address {
+  font-family: "Arial";
   font-size: 14px;
   line-height: 20px;
   color: @text-color;
@@ -19,15 +22,32 @@
 
 .contacts__map {
   display: block;
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: @tablet-width) {
+
   .contacts__wrapper {
-    width: @tablet-wrapper;
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 32px;
+  }
+
+  .contacts__dealer {
+    font-size: 20px;
+    line-height: 25px;
+    margin-right: 24px;
+    width: 155px;
+    margin-left: 42px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+    width: 160px;
+    margin-right: 42px;
   }
 }
 
@@ -38,7 +58,20 @@
 
   .contacts__wrapper {
     position: absolute;
-    left: 400px;
-    top: 150px;
+    width: 570px;
+    padding: 42px 35px;
+    justify-content: flex-start;
+    left: 18%;
+    top: 24%;
+    background-color: @promo-text-color;
+  }
+
+  .contacts__dealer {
+    margin-left: 42px;
+  }
+
+  .contacts__address {
+    margin-left: 70px;
+    text-align: start;
   }
 }
