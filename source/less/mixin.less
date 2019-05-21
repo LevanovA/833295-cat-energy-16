@@ -10,7 +10,7 @@
   color: @headline-color;
   margin: 0;
 
-  @media (min-width: @tablet-width)  {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
   }
 }
@@ -23,7 +23,7 @@
 }
 
 .description () {
-  font-family: "Arial";
+  font-family: "Arial", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @text-color;
@@ -33,11 +33,11 @@
   width: @mobile-wrapper;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width)  {
-      width: @tablet-wrapper;
+  @media (min-width: @tablet-width) {
+    width: @tablet-wrapper;
   }
 
-  @media (min-width: @desktop-width)  {
+  @media (min-width: @desktop-width) {
     width: @desktop-wrapper;
   }
 }

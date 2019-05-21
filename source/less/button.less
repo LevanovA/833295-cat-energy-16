@@ -11,5 +11,18 @@
   &--show-all {
     color: @text-color;
     background-color: @bg-white-three;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 20px;
+      width: 250px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 170px;
+    }
   }
 }
