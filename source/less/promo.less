@@ -2,13 +2,18 @@
   background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position-y: 170px, 0;
+  background-position-x: 50%, 50%;
+  padding-top: 1px;
+  margin-bottom: 20px;
 }
 
 .promo__headline {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 36px;
   color: @promo-text-color;
-  margin: 0;
+  width: 245px;
+  margin: 0 auto;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -18,25 +23,32 @@
   text-align: center;
   color: @promo-text-color;
   text-transform: @font-type;
+  margin-top: 20px;
 }
 
 .promo__button {
-  margin-top: 340px;
+  margin-top: 305px;
   margin-right: auto;
   margin-left: auto;
   width: 280px;
+  padding-top: 14px;
+  padding-bottom: 9px;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     background-image: url("../img/index-can-tablet@1x.jpg");
-    padding-bottom: 610px;
+    background-position-y: 253px, 0;
+    padding-bottom: 511px;
+    padding-left: 90px;
+    padding-top: 51px;
   }
 
   .promo__headline {
     font-size: 60px;
     line-height: 60px;
     color: @headline-color;
+    width: 450px;
     margin: 0;
     text-align: left;
   }
@@ -46,10 +58,15 @@
     line-height: 20px;
     color: @headline-color;
     text-align: left;
+    margin-top: 41px;
   }
 
   .promo__button {
-    margin-top: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    margin-top: 47px;
     margin-right: auto;
     margin-left: 0;
     width: 245px;
@@ -58,22 +75,28 @@
 
 @media (min-width: @desktop-width) {
   .promo {
+    width: 1440px;
+    margin: 0 auto;
     background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 570px, right;
-    background-position-y: 140px, 0;
+    background-position-x: 562px, right;
+    background-position-y: 143px, 0;
     padding: 1px;
-    padding-bottom: 200px;
+    padding-bottom: 190px;
   }
 
   .promo__headline {
-    margin-top: 240px;
-    width: 440px;
+    margin-top: 220px;
+    width: 450px;
   }
 
   .promo__headline,
   .promo__call,
   .promo__button {
     margin-left: 190px;
+  }
+
+  .promo__button {
+    margin-top: 53px;
   }
 }

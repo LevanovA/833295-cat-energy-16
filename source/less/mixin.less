@@ -8,6 +8,11 @@
   font-size: 36px;
   line-height: 60px;
   color: @headline-color;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .h3-headline () {
@@ -18,12 +23,21 @@
 }
 
 .description () {
+  font-family: "Arial", "Verdana", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @text-color;
 }
 
-.wrapper-mobile () {
-  width: 280px;
+.wrapper () {
+  width: @mobile-wrapper;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-wrapper;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-wrapper;
+  }
 }
