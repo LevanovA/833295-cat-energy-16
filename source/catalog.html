@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,12 +19,14 @@
         </picture>
       </a>
       <nav class="main-nav main-nav--color main-nav--opened">
-        <button class="main-nav__toggle" type="button"></button>
+        <div class="main-nav__box">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--current">
             <a>Каталог продукции</a>
           </li>
           <li class="main-nav__item">
@@ -35,9 +39,12 @@
   <main class="catalog-main">
     <div class="catalog-main__wrapper">
       <h1 class="catalog-main__headline">Каталог продукции</h1>
-      <section class="basic-goods">
+    </div>
+    <section class="basic-goods">
+      <div class="basic-goods__container">
         <ul class="basic-goods__list">
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop@1x.png">
@@ -63,8 +70,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+            </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop@1x.png">
@@ -90,8 +99,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/fish-small-desktop@1x.png">
@@ -117,8 +128,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/fish-big-desktop@1x.png">
@@ -144,8 +157,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop@1x.png">
@@ -171,8 +186,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop@1x.png">
@@ -198,8 +215,10 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <a class="basic-goods__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/rice-small-desktop@1x.png">
@@ -225,19 +244,24 @@
               </table>
             </div>
             <a class="button basic-goods__button" href="#">Заказать</a>
+          </div>
           </li>
           <li class="basic-goods__item">
+            <div class="basic-goods__wrapper">
             <div class="basic-goods__all">
               <p class="basic-goods__plus"></p>
               <p class="basic-goods__more">Показать еще 100500 товаров</p>
               <p class="basic-goods__tagline">На самом деле вкусов гораздо больше!</p>
               <a class="button button--show-all" href="#">Показать все</a>
             </div>
+            </div>
           </li>
         </ul>
-      </section>
-      <section class="additional-goods">
-        <h2 class="additional-goods__headline">Дополнительные товары</h2>
+      </div>
+    </section>
+    <div class="catalog-main__wrapper">
+    <section class="additional-goods">
+        <h2 class="additional-goods__headline"><span class="additional-goods__empty">Дополнительные товары</span></h2>
         <div class="additional-goods__box">
           <ul class="additional-goods__list">
             <li class="additional-goods__item">
@@ -282,44 +306,46 @@
             </li>
           </ul>
           <section class="gift">
-            <p class="gift-description">Закажите все <br> и получите чехол для кота в подарок!</p>
+            <p class="gift-description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
           </section>
         </div>
-      </section>
-    </div>
+    </section>
+  </div>
   </main>
   <footer class="page-footer">
     <section class="contacts contacts--catalog">
       <div class="contacts__wrapper">
         <p class="contacts__dealer">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<span class="contacts__city">Санкт-Петербург</span></p>
       </div>
       <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Карта расположения магазина" width="320" height="400">
     </section>
-    <div class="page-footer__container">
-      <a class="page-footer__logo" href="#">
-        <img src="img/footer-logo-svg.svg" alt="Логотип Cat Energy" width="128" height="24">
-      </a>
-      <section class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
-          </li>
-        </ul>
-      </section>
-      <div class="page-footer__copyright">
-        <div class="page-footer__wrapper">
-          <p class="page-footer__academy">HTML Academy</p>
-          <span class="page-footer__logo-academy"></span>
+    <div class="page-footer__bottom">
+        <div class="page-footer__container">
+          <a class="page-footer__logo" href="#">
+            <img src="img/logo-footer.svg" alt="Логотип Cat Energy" width="128" height="24">
+          </a>
+          <section class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконткте</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Инстаграм</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
+              </li>
+            </ul>
+          </section>
+          <div class="page-footer__copyright">
+            <div class="page-footer__wrapper">
+              <p class="page-footer__academy">HTML Academy</p>
+              <span class="page-footer__logo-academy"></span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </footer>
   <script>
       var navMain = document.querySelector('.main-nav');
