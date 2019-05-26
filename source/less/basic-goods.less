@@ -9,7 +9,17 @@
 .basic-goods__item {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid @bg-white-three;
+  border-bottom: 1px solid @border-color;
+
+  &:first-child {
+    border-top: 1px solid @border-color;
+  }
+}
+
+.basic-goods__wrapper {
+  .wrapper;
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 25px;
 }
 
@@ -22,6 +32,7 @@
 .basic-goods__more {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -82,7 +93,8 @@
 }
 
 .basic-goods__all {
-  width: 100%;
+  padding-bottom: 25px;
+  margin: 0 auto;
 }
 
 .basic-goods__plus {
@@ -97,6 +109,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .basic-goods {
+    margin-bottom: 52px;
+  }
+
+  .basic-goods__container {
+    .wrapper;
+  }
+
   .basic-goods__list {
     display: flex;
     flex-wrap: wrap;
@@ -104,16 +124,24 @@
   }
 
   .basic-goods__item {
-    display: block;
-    width: 324px;
+    margin-bottom: 138px;
     background-color: @bg-white-three;
-    padding-bottom: 40px;
-    margin-bottom: 137px;
+
+    &:nth-child(7) {
+      margin-bottom: 0;
+    }
 
     &:last-child {
+      margin-bottom: 0;
       background-color: @promo-text-color;
-      border: 1px solid @bg-white-three;
+      border: 1px solid @border-color;
     }
+  }
+
+  .basic-goods__wrapper {
+    display: block;
+    width: 324px;
+    padding-bottom: 40px;
   }
 
   .basic-goods__img {
@@ -148,25 +176,25 @@
   }
 
   .basic-goods__specifications {
-    display: block;
     margin: 0 auto;
     font-size: 16px;
     line-height: 16px;
-    width: 242px;
+    width: 250px;
     border-collapse: collapse;
     margin-bottom: 31px;
   }
 
   .basic-goods__specifications tr {
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid @border-color;
   }
 
   .basic-goods__specifications th {
-    padding: 5px 0 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
   }
 
-  .basic-goods__specifications td {
-    padding-left: 137px;
+  .basic-goods__all {
+    padding-bottom: 0;
   }
 
   .basic-goods__button {
@@ -200,8 +228,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .basic-goods {
+    margin-bottom: 60px;
+  }
+
   .basic-goods__item {
     width: 245px;
+
+    &:nth-child(5) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(6) {
+      margin-bottom: 0;
+    }
   }
 
   .basic-goods__img {

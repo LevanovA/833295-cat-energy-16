@@ -10,11 +10,13 @@
   padding-top: 22px;
   padding-bottom: 22px;
   text-transform: @font-type;
-  border-bottom: 1px solid @bg-white-three;
+  border-top: 1px solid @border-color;
+}
 
-  &:first-child {
-    border-top: 1px solid @bg-white-three;
-  }
+.main-nav__box {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .main-nav__toggle {
@@ -23,7 +25,7 @@
   width: 25px;
   height: 25px;
   background-color: #ffffff;
-  top: 25px;
+  top: -43px;
   left: 255px;
   cursor: pointer;
   outline: none;
@@ -70,6 +72,34 @@
     &:first-child {
       border: none;
     }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: @bg-leaf;
+      }
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: @bg-leaf;
+      }
+    }
   }
 }
 
@@ -94,5 +124,9 @@
 
   .main-nav--color a {
     color: @headline-color;
+  }
+
+  .main-nav__item--active::after {
+    background-color: @promo-text-color;
   }
 }

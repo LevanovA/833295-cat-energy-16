@@ -5,9 +5,11 @@
 .form-main__headline {
   font-size: 36px;
   line-height: 60px;
+  font-weight: 400;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 14px;
   margin-bottom: 24px;
+  color: @headline-color;
 }
 
 .form-main__description {
@@ -15,5 +17,37 @@
   line-height: 18px;
   width: 228px;
   margin-bottom: 33px;
+  color: @headline-color;
   text-transform: @font-type;
+}
+
+@media (min-width: @tablet-width) {
+  .form-main__headline {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 55px;
+  }
+
+  .form-main__description {
+    font-size: 20px;
+    line-height: 30px;
+    width: 325px;
+    padding-left: 41px;
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-main__headline {
+    margin-top: 67px;
+  }
+
+  .form-main__description {
+    width: 325px;
+    padding-left: 0;
+    margin-bottom: 62px;
+  }
 }

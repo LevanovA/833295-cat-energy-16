@@ -72,6 +72,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    position: relative;
     padding-bottom: 681px;
   }
 
@@ -103,23 +104,80 @@
   }
 
   .advantages__description {
+    position: relative;
     font-size: 16px;
     line-height: 24px;
 
     &--sheet {
       width: 202px;
+
+      &::before {
+        content: "1";
+        font-family: "Oswald", "Arial", sans-serif;
+        font-size: 281px;
+        line-height: 281px;
+        position: absolute;
+        width: 71px;
+        height: 228px;
+        top: -155px;
+        left: 118px;
+        color: #f2f2f2;
+        z-index: -1;
+      }
     }
 
     &--powder {
       width: 223px;
+
+      &::before {
+        content: "2";
+        font-family: "Oswald", "Arial", sans-serif;
+        font-size: 281px;
+        line-height: 281px;
+        position: absolute;
+        width: 71px;
+        height: 228px;
+        top: -155px;
+        left: 109px;
+        color: #f2f2f2;
+        z-index: -1;
+      }
     }
 
     &--cutlery {
       width: 205px;
+
+      &::before {
+        content: "3";
+        font-family: "Oswald", "Arial", sans-serif;
+        font-size: 281px;
+        line-height: 281px;
+        position: absolute;
+        width: 71px;
+        height: 228px;
+        top: -155px;
+        left: 113px;
+        color: #f2f2f2;
+        z-index: -1;
+      }
     }
 
     &--clock {
       width: 246px;
+
+      &::before {
+        content: "4";
+        font-family: "Oswald", "Arial", sans-serif;
+        font-size: 281px;
+        line-height: 281px;
+        position: absolute;
+        width: 71px;
+        height: 228px;
+        top: -155px;
+        left: 111px;
+        color: #f2f2f2;
+        z-index: -1;
+      }
     }
   }
 }

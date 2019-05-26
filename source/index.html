@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,9 +19,11 @@
         </picture>
       </a>
       <nav class="main-nav main-nav--opened">
-        <button class="main-nav__toggle" type="button"></button>
+        <div class="main-nav__box">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <ul class="main-nav__list">
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--active">
             <a>Главная</a>
           </li>
           <li class="main-nav__item">
@@ -70,7 +74,6 @@
         </ul>
       </div>
     </section>
-    <hr class="page-main__line">
     <section class="live">
       <div class="live__container">
         <div class="live__wrapper">
@@ -95,12 +98,19 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
             <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-            <img class="live__img" src="img/before-mobile@1x.png" alt="Кот Борис" width="311" height="232">
+            <img class="live__img live__img--before" src="img/before-mobile@1x.png" alt="Кот Борис" width="311" height="232">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+            <img class="live__img live__img--after" src="img/after-mobile@1x.png" alt="Кот Борис" width="311" height="232">
           </picture>
           <div class="live__box">
             <button class="switch__was" type="button">Было</button>
+            <div class="live__strip"></div>
             <div class="switch__scale">
-              <div class="switch__value"></div>
+              <div class="switch__value switch__value--was"></div>
+              <div class="switch__value switch__value--become"></div>
             </div>
             <button class="switch__become" type="button">Стало</button>
           </div>
@@ -112,7 +122,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <p class="contacts__dealer">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<span class="contacts__city">Санкт-Петербург</span></p>
       </div>
       <picture>
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
@@ -128,13 +138,13 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконткте</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Инстаграм</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
             </li>
           </ul>
         </section>
