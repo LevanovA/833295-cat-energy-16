@@ -11,6 +11,14 @@
   padding-bottom: 22px;
   text-transform: @font-type;
   border-top: 1px solid @border-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__box {
@@ -49,6 +57,14 @@
 @media (max-width: @tablet-width) {
   .main-nav--closed .main-nav__list {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
   }
 }
 
