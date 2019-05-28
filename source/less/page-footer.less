@@ -16,6 +16,14 @@
   width: 128px;
   margin: 0 auto;
   margin-bottom: 31px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__logo img {
@@ -25,15 +33,31 @@
 
 .page-footer__academy {
   font-family: "Arial", "Verdana", sans-serif;
+  color: @text-color;
   margin: 0;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__logo-academy {
   display: block;
+}
+
+.page-footer__academy-icon {
   width: 40px;
-  height: 50px;
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
+  height: 40px;
+  fill: #666666;
+
+  &:hover {
+    fill: @bg-leaf;
+  }
+
+  &:active {
+    fill: rgba(104, 183, 56, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -64,6 +88,6 @@
 
   .page-footer__logo-academy {
     width: 40px;
-    height: 50px;
+    height: 40px;
   }
 }

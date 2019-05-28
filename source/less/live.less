@@ -79,7 +79,7 @@
 
 .live__box {
   display: flex;
-  margin-left: 58px;
+  margin-left: 62px;
   margin-top: 37px;
 }
 
@@ -88,40 +88,62 @@
   width: 320px;
 }
 
-.switch__was {
+.live__was {
   font-size: 16px;
   line-height: 20px;
   color: @headline-color;
   text-transform: @font-type;
+  padding: 0;
+  padding-bottom: 5px;
   border: none;
   background-color: @bg-white-three;
   cursor: pointer;
+  border-bottom: dotted 1px #cdcdcd;
+
+   &:hover {
+     border-bottom: solid 1px #999999;
+   }
+
+   &:active {
+     border-bottom: none;
+   }
 }
 
-.switch__become {
+.live__become {
   font-size: 16px;
   line-height: 20px;
   color: @headline-color;
-  margin-left: 10px;
+  margin-left: 16px;
   text-transform: @font-type;
+  padding: 0;
+  padding-bottom: 5px;
   border: none;
   background-color: @bg-white-three;
   cursor: pointer;
+  border-bottom: dotted 1px #cdcdcd;
+
+   &:hover {
+     border-bottom: solid 1px #999999;
+   }
+
+   &:active {
+     border-bottom: none;
+   }
 }
 
-.switch__scale {
+.live__scale {
   display: flex;
   justify-content: space-between;
   width: 84px;
   height: 14px;
-  margin-left: 12px;
+  margin-left: 18px;
   margin-top: 3px;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
   background-color: @promo-text-color;
 }
 
-.switch__value {
+.live__position {
   width: 35px;
   height: 6px;
   margin-top: 4px;
@@ -234,16 +256,28 @@
     margin-left: 53px;
   }
 
-  .switch__scale {
+  .live__scale {
     position: absolute;
-    top: -10px;
-    width: 34px;
-    height: 34px;
-    left: 261px;
+    top: -8px;
+    width: 32px;
+    height: 32px;
+    left: 251px;
     border-radius: 50%;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-sizing: border-box;
+      border: 2px solid @bg-leaf;
+      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
   }
 
-  .switch__was {
+  .live__was {
     font-size: 20px;
   }
 
@@ -251,12 +285,12 @@
     width: 428px;
     height: 6px;
     margin-top: 9px;
-    margin-left: 18px;
+    margin-left: 26px;
     border-radius: 2.5px;
     background-color: #dcdcdc;
   }
 
-  .switch__value {
+  .live__position {
     width: 8px;
     height: 8px;
     margin-top: 12px;
@@ -264,9 +298,9 @@
     border-radius: 50%;
   }
 
-  .switch__become {
+  .live__become {
     font-size: 20px;
-    margin-left: 14px;
+    margin-left: 19px;
   }
 }
 

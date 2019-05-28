@@ -45,6 +45,7 @@
     width: 100vw;
     height: 3px;
     top: 15px;
+    left: calc((100vw - @mobile-wrapper) / -2);
     background-color: @bg-leaf;
   }
 }
@@ -84,12 +85,20 @@
     margin-left: 33px;
     padding: 4px 0;
     padding-left: 13px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--checkbox {
     margin-left: 33px;
     padding: 4px 0;
     padding-left: 13px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--mail::after {
@@ -111,6 +120,31 @@
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
   }
+}
+
+.form__owner .form__item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.form__input--mail:focus + .form__label--mail::after {
+  background-image: url("../img/icon-mail-green.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input--mail:focus:invalid + .form__label--mail::after {
+  background-image: url("../img/icon-mail-red.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input--tel:focus + .form__label--tel::after {
+  background-image: url("../img/icon-phone-green.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input--tel:focus:invalid + .form__label--tel::after {
+  background-image: url("../img/icon-phone-red.svg");
+  background-repeat: no-repeat;
 }
 
 .form__input--radio + label::before {
@@ -135,6 +169,15 @@
   border-radius: 50%;
 }
 
+.form__input--radio:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.form__input--radio:active + label::before,
+.form__input--radio:checked:active + label::after{
+  opacity: 0.3;
+}
+
 .form__input--checkbox + label::before {
   content: "";
   position: absolute;
@@ -154,6 +197,15 @@
   background-image: url("../img/icon-tick.svg");
 }
 
+.form__input--checkbox:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.form__input--checkbox:active + label::before,
+.form__input--checkbox:checked:active + label::after{
+  opacity: 0.3;
+}
+
 .form__input--text {
   flex-grow: 1;
   padding-top: 12px;
@@ -162,8 +214,20 @@
   margin-left: 14px;
   border: 1px solid @border-color;
   text-transform: @font-type;
-}
+  outline: none;
 
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border: 2px solid @text-color;
+
+    &:invalid {
+      border: 2px solid #ff8282;
+    }
+  }
+}
 
 .form__textarea {
   font-size: 16px;
@@ -176,6 +240,18 @@
   border: 1px solid @border-color;
   outline: none;
   text-transform: @font-type;
+
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border: 2px solid @text-color;
+
+    &:invalid {
+      border: 2px solid #ff8282;
+    }
+  }
 }
 
 .form__button {
@@ -259,7 +335,7 @@
 
     &::before {
       top: 22px;
-      left: calc((100vw - @tablet-wrapper) / -2);
+      left: calc((100vw - 610px) / -2);
     }
   }
 
