@@ -34,9 +34,9 @@
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="live__img" src="img/logo-mobile.svg" alt="Кот Борис" width="311" height="232">
+          <img class="page-header__img" src="img/logo-mobile.svg" alt="Кот Борис" width="311" height="232">
         </picture>
       </a>
       <nav class="main-nav main-nav--color main-nav--opened">
@@ -68,15 +68,15 @@
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label form__label--text" for="cat-name">Имя:*</label>
-            <input class="form__input--text" type="text" name="name" id="cat-name" placeholder="Барсик" required>
+            <input class="form__input form__input--text" type="text" name="name" id="cat-name" placeholder="Барсик" required>
           </li>
           <li class="form__item">
             <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
-            <input class="form__input--text" type="text" name="weight" id="cat-weight" placeholder="7" required>
+            <input class="form__input form__input--text" type="text" name="weight" id="cat-weight" placeholder="7" required>
           </li>
           <li class="form__item">
             <label class="form__label form__label--text" for="cat-age">Возраст (лет):</label>
-            <input class="form__input--text" type="text" name="age" id="cat-age" placeholder="7">
+            <input class="form__input form__input--text" type="text" name="age" id="cat-age" placeholder="7">
           </li>
         </ul>
       </fieldset>
@@ -99,14 +99,14 @@
       </div>
       <fieldset class="form__owner">
         <div class="form__wrapper form__wrapper--tablet">
-        <h2 class="form__headline form__headline--owner"><span class="form__empty--contacts"><span class="form__empty">Контактные данные</span> (владельца кота)</span></h2>
+        <h2 class="form__headline form__headline--owner"><span class="form__contact"><span class="form__empty">Контактные данные</span> (владельца кота)</span></h2>
         <ul class="form__list">
           <li class="form__item">
-            <input class="form__input--text form__input--mail" type="email" name="e-mail" id="mail" placeholder="kuklachev@gmail.com" required>
+            <input class="form__input form__input--text form__input--mail" type="email" name="e-mail" id="mail" placeholder="kuklachev@gmail.com" required>
             <label class="form__label form__label--text form__label--mail" for="mail">E-mail:*</label>
           </li>
           <li class="form__item">
-            <input class="form__input--text form__input--tel" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+            <input class="form__input form__input--text form__input--tel" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
             <label class="form__label form__label--text form__label--tel" for="phone">Телефон:*</label>
           </li>
         </ul>
@@ -150,14 +150,16 @@
   <footer class="page-footer">
     <section class="contacts contacts--catalog">
       <div class="contacts__wrapper">
-        <p class="contacts__dealer">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<span class="contacts__city">Санкт-Петербург</span></p>
+        <p class="contacts__dealer">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2371490499725!2d30.323184589915243!3d59.93846169331986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1559120248891!5m2!1sru!2sru" width="600" height="400" style="border:0" allowfullscreen></iframe>
+      </div>
     </section>
     <div class="page-footer__bottom">
         <div class="page-footer__container">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="index.html">
             <img src="img/logo-footer.svg" alt="Логотип Cat Energy" width="128" height="24">
           </a>
           <section class="social">
@@ -165,7 +167,7 @@
               <li class="social__item">
                 <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span
                     class="visually-hidden">Вконткте</span>
-                  <svg class="social__icon--vkontakte" width="22" height="12">
+                  <svg class="social__icon social__icon--vkontakte" width="22" height="12">
                     <use xlink:href="#vk-icon"></use>
                   </svg>
                 </a>
@@ -173,7 +175,7 @@
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span
                     class="visually-hidden">Инстаграм</span>
-                  <svg class="social__icon--instagram" width="16" height="16">
+                  <svg class="social__icon social__icon--instagram" width="16" height="16">
                     <use xlink:href="#inst-icon"></use>
                   </svg>
                 </a>
@@ -181,7 +183,7 @@
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span
                     class="visually-hidden">Фейсбук</span>
-                  <svg class="social__icon--facebook" width="10" height="19">
+                  <svg class="social__icon social__icon--facebook" width="10" height="19">
                     <use xlink:href="#fb-icon"></use>
                   </svg>
                 </a>
@@ -190,8 +192,8 @@
           </section>
           <div class="page-footer__copyright">
             <div class="page-footer__wrapper">
-              <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__academy">HTML Academy</a>
-              <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo-academy">
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__academy">
+                <span class="page-footer__academy-name">HTML Academy</span>
                 <svg class="page-footer__academy-icon" width="40" height="40">
                   <use xlink:href="#academy-svg"></use>
                 </svg>

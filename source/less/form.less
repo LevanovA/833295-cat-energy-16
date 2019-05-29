@@ -45,7 +45,7 @@
     width: 100vw;
     height: 3px;
     top: 15px;
-    left: calc((100vw - @mobile-wrapper) / -2);
+    left: calc((100vw - 260px) / -2);
     background-color: @bg-leaf;
   }
 }
@@ -195,6 +195,7 @@
   height: 17px;
   left: -28px;
   background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
 }
 
 .form__input--checkbox:hover + label::before {
@@ -203,6 +204,11 @@
 
 .form__input--checkbox:active + label::before,
 .form__input--checkbox:checked:active + label::after {
+  opacity: 0.3;
+}
+
+.form__input--checkbox:focus + label,
+.form__input--radio:focus + label {
   opacity: 0.3;
 }
 
@@ -339,7 +345,7 @@
     }
   }
 
-  .form__empty--contacts {
+  .form__contact {
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
@@ -488,7 +494,7 @@
     }
 
     &::before {
-      left: calc((100vw - @desktop-wrapper) / -2);
+      left: calc((100vw - 1200px) / -2);
     }
   }
 

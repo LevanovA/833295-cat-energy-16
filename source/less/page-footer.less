@@ -1,8 +1,5 @@
 .page-footer__wrapper {
   .wrapper;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .page-footer__bottom {
@@ -33,6 +30,9 @@
 
 .page-footer__academy {
   font-family: "Arial", "Verdana", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: @text-color;
   margin: 0;
   text-decoration: none;
@@ -40,10 +40,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.page-footer__logo-academy {
-  display: block;
 }
 
 .page-footer__academy-icon {
@@ -62,7 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .page-footer__bottom {
-    padding-top: 37px;
+    padding-top: 40px;
   }
 
   .page-footer__wrapper {
