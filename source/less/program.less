@@ -1,6 +1,6 @@
 .program__wrapper {
   .wrapper;
-  margin-top: 21px;
+  margin-top: 23px;
 }
 
 .program__list {
@@ -10,7 +10,7 @@
 .program__item {
   padding-top: 23px;
   background-color: @bg-white-three;
-  margin-bottom: 20px;
+  margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -129,6 +129,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .program__wrapper {
+    .wrapper;
+    margin-top: 0;
+  }
+
+  .program__item {
+    margin-top: 0;
+  }
+
   .program__headline {
     font-size: 36px;
     line-height: 37px;
@@ -166,6 +175,7 @@
   .program__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .program__item {
